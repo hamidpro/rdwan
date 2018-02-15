@@ -11,6 +11,41 @@
   }
 }
 
+.big{
+  display: inline-block;
+  width: 100%;
+  margin: O;
+  padding: 2px;
+  border-radius: 2%;
+  background: white;
+  -ms-content-zooming: 199%;
+
+}
+
+.large{
+  display: inline-block;
+  min-height: 80px;
+  padding: 2px;
+  border-radius: 2%;
+
+  margin: 0px 20px 20px 10px;
+  width:95%;
+}
+
+.right{
+  align-content: right;
+  background: red;
+  right: 0;
+  position: relative;
+}
+
+.buttonInItem{
+  position: absolute;
+  right:1px;
+  top:7px;
+  display: inline-block;
+
+}
 
 // Name of the next breakpoint, or null for the last breakpoint.
 //
@@ -35,6 +70,7 @@
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
 }
+
 
 
 // Creates text alignment classes based on screen size
@@ -67,3 +103,4 @@
     }
   }
 }
+

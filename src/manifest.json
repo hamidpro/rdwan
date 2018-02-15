@@ -1,6 +1,6 @@
 {
-  "name": "Ionic Conference",
-  "short_name": "Ionic Conf",
+  "name": "CodeBarreApp",
+  "short_name": "CodeBarreApp",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
