@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Aide</ion-title>
+      <!-- <ion-buttons end>
+        <button ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+<ion-item (click)="goToPage('1')">
+<h1>C'est quoi CodeBarApp</h1>
+CodeBarApp est une appication mobile pour la gestion  de stock avec le code a bar 
+
+</ion-item>
+<ion-item (click)="goToPage('2')">
+<h1>Comment utiliser cette application</h1>   
+il suffit de l'installer et crée un nouveau compte puis ajouter des articles
+et chaque fois vous voulez faire un innventaire cliquer sur le menu inventaire puis nouveau
+inventaire et remplire les informations c'est tous 
+chaque moment vous pouvez examiner les statistique globale
+et les statistique pour chaque inventaire
+
+
+</ion-item>
+<ion-item (click)="goToPage('3')">
+<h1>quelle sont les language de programmation utilisées</h1>   
+pour le serveur : NodeJs
+pour le client : IONIC 3 avec Angular 4
+pour Base de donnée :MYSQL5
+
+
+
+</ion-item>
+<ion-item (click)="goToPage('4')">
+<h1>A propos de InfoTech ?</h1>   
+entreprise informatique qui se setue 
+
+Siège central : 265, Bd Zerktouni N° 92
+sinfotech.sarl@gmail.com
++212 6 70 05 86 34
++212 6 63 12 95 77
+
+</ion-item>   
+</ion-list>
+
+</ion-content>
+  

@@ -1,0 +1,100 @@
+<!--
+  Generated template for the ArticlesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+  
+       
+          <ion-title>Inve Détaille</ion-title>
+
+
+    <ion-buttons *ngIf="admin"   end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="inventory">
+
+    <div><h2>Informations de l'inventaire</h2></div>
+
+
+
+    <form #inventoryForm="ngForm" novalidate>
+  <ion-list no-lines>
+
+    <!--start_date-->
+    <ion-item>
+      <ion-label stacked color="primary">Date Début</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" pickerFormat="YYYY-MM-DD HH:mm:ss"  [(ngModel)]="inventory.start_date" name="start_date"  #start_date="ngModel" required> </ion-datetime> 
+    </ion-item>
+    <p ion-text [hidden]="start_date.valid || submitted == false" color="danger" padding-left>
+      Date Début est Obligatoire
+    </p>
+    <!--  -->
+
+
+    <!--end_date 
+    <ion-item>
+      <ion-label stacked color="primary">Date Fin</ion-label>
+      <ion-datetime pickerFormat="DD-MM-YYYY HH:mm" displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="inventory.end_date" name="end_date"  #end_date="ngModel" required> </ion-datetime> 
+  
+    </ion-item>
+    <p ion-text [hidden]="end_date.valid || submitted == false" color="danger" padding-left>
+      Date Fin est Obligatoire
+    </p>
+    -->
+        <!--end_date -->
+        <ion-item>
+          <ion-label stacked color="primary">Emplacement</ion-label>
+          <ion-input [(ngModel)]="inventory.location" name="location" type="text" #location="ngModel" required>
+          </ion-input>
+          
+        </ion-item>
+        <p ion-text [hidden]="location.valid || submitted == false" color="danger" padding-left>
+          Emplacement est Obligatoire
+        </p>
+      
+        </ion-list>
+        </form>
+
+   <ion-list no-line>
+  <ion-item>
+      <b>  <br> La liste des articles </b>  
+        <div class="buttonInItem">
+        <button *ngIf="!open" ion-button  (click)="addArticleToInventory()" >Ajouter &nbsp; <i class="fa fa-file-text" aria-hidden="true"></i></button> 
+     
+      </div>
+  </ion-item>
+  </ion-list>
+
+  <ion-list inset>
+      <ion-item class="item" *ngFor="let article of inventory.listArticle">
+          <b> Réf : </b>      {{article.reference_article}}<br>
+          <b> Libellé: </b>   {{article.libelle_article}}<br>
+         
+         
+            <div class="buttonInItem">
+             <button *ngIf="!open" ion-button  class="button button-positive" ion-button color="secondary" (click)="edit(article,inventory)" large><i class="fa fa-pencil" aria-hidden="true" ></i></button>
+             <button *ngIf="!open" ion-button  class="button button-assertive" ion-button color="danger"     (click)="delete(article,inventory)" large><i class="fa fa-trash-o" aria-hidden="true" ></i></button>
+            </div>
+        
+
+       </ion-item>
+    
+      </ion-list>
+   </div>
+  
+</ion-content>

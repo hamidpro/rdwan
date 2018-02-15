@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nouvelle Op Inventaire</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<div class="logo">
+  
+</div>
+
+<form #inventoryForm="ngForm" novalidate>
+  <ion-list>
+
+    <!--start_date-->
+    <ion-item>
+      <ion-label stacked color="primary">Date Début</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" pickerFormat="YYYY-MM-DD HH:mm"  [(ngModel)]="inventory.start_date" name="start_date"  #start_date="ngModel" required> </ion-datetime> 
+    </ion-item>
+    <p ion-text [hidden]="start_date.valid || submitted == false" color="danger" padding-left>
+      Date Début est Obligatoire
+    </p>
+    <!--  -->
+
+        <ion-item>
+          <ion-label stacked color="primary">Emplacement</ion-label>
+          <ion-input [(ngModel)]="inventory.location" name="location" type="text" #location="ngModel" required>
+          </ion-input>
+          
+        </ion-item>
+        <p ion-text [hidden]="location.valid || submitted == false" color="danger" padding-left>
+          Emplacement est Obligatoire
+        </p>
+
+        <ion-row responsive-sm>
+          <ion-col>
+            <button   class="large" ion-button (click)="valider(inventoryForm)"  block ><i class="fa fa-floppy-o" aria-hidden="true">&nbsp; Valider</i> </button>
+          </ion-col>
+          </ion-row>
+
+       <ion-row responsive-sm>
+          <ion-col>
+          <button  class="large" ion-button (click)="cancelthis()"  block > Annuler
+            </button>
+        </ion-col>
+        </ion-row>
+
+      
+        </ion-list>
+        </form>
+        </ion-content>  
+        

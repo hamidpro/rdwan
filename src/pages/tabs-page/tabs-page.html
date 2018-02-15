@@ -1,0 +1,17 @@
+<ion-tabs *ngIf="admin" [selectedIndex]="mySelectedIndex" name="conference">
+  
+  <ion-tab  [root]="tab1Root" tabTitle="Articles"     tabIcon="clipboard" ></ion-tab>
+  <ion-tab  [root]="tab2Root" tabTitle="Inventaire"  tabIcon="browsers"></ion-tab>
+  <ion-tab  [root]="tab3Root" tabTitle="Statistiques" tabIcon="pie" ></ion-tab>
+  <ion-tab  [root]="tab4Root" tabTitle="Paramètres"   tabIcon="settings"></ion-tab>
+  <ion-tab  [root]="tab5Root" tabTitle="Aide"         tabIcon="help-buoy"></ion-tab>
+
+</ion-tabs>
+
+<ion-tabs *ngIf="!admin" [selectedIndex]="mySelectedIndex" name="conference">
+    
+    
+    <ion-tab  [root]="tab1Root" tabTitle="Inventaire"  tabIcon="browsers"></ion-tab>
+    <ion-tab  [root]="tab2Root" tabTitle="Aide"         tabIcon="help-buoy"></ion-tab>
+  
+  </ion-tabs>

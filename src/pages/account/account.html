@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <div padding-top text-center>
+    <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+    <h2>{{user.nom_user}} {{user.prenom_user}}</h2>
+
+    <ion-list inset>
+      <button ion-item (click)="changePrenom()">Prénom :<b>{{user.prenom_user}} </b></button>
+      <button ion-item (click)="changeNom()">Nom : <b>{{user.nom_user}} </b></button>
+      <button ion-item >Role : <b>{{user.role}} </b></button>
+      <button ion-item (click)="changeEmail()">E-mail : <b> {{user.email_user}}</b></button>
+      <button ion-item (click)="changeTel1()">Tél 1 :  <b>{{user.tel1_user}}</b></button>
+      <button ion-item (click)="changeTel2()">Tél 2:   <b>{{user.tel2_user}}</b></button>
+
+      <button ion-item (click)="changeAdresse()">Adresse :   <b>{{user.adresse_user}}</b></button>
+      <button ion-item (click)="changeCodePostal()">Code Postal :  <b> {{user.code_postal_user}}</b></button>
+
+      <button ion-item (click)="changeUsername()">Nom d'utilisateur :  <b>{{user.username}}</b></button>
+      <button ion-item (click)="changePassword()">Changer Mot De Passe</button>
+      <button ion-item (click)="logout()">Logout</button>
+    </ion-list>
+  </div>
+
+</ion-content>

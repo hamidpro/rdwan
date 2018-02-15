@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Filtrer</ion-title>
+   <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Filtrer</ion-title>
+     <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<form #parametreForm="ngForm" novalidate>
+
+  <ion-list no-lines>
+
+    <!--start_date-->
+    <ion-item>
+
+      <ion-label>paramètre</ion-label>
+      <ion-select [(ngModel)]="parametreSelected" name="parameterSelec" #parameterSelec="ngModel" required >
+          <ion-option  *ngFor="let p of listParametresName" value="{{p}}"    (ionSelect)="getValues($event)">{{p}}</ion-option>
+        </ion-select>
+        <p ion-text [hidden]="parameterSelec.valid || submitted == false" color="danger" padding-left>
+            Veuillez choisir un paraémtre
+           </p>
+
+      </ion-item>
+
+        <ion-item class="item">
+            <ion-label >Valeur</ion-label>
+            <ion-select [(ngModel)]="ValueSelected"  name="ValueSelected1"  #ValueSelected1="ngModel" required>
+              <ion-option  *ngFor="let v of listParametresValue" value="{{v}}">{{v}}</ion-option>
+            </ion-select>
+            <p ion-text [hidden]="ValueSelected1.valid || submitted == false" color="danger" padding-left>
+                Veuillez choisir une valeur
+               </p>
+
+
+</ion-item>
+    </ion-list>
+
+
+    <ion-row responsive-sm >
+      <ion-col>
+        <button class="large" ion-button (click)="valider(parametreForm)" type="submit" block large><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Valider</button>
+      </ion-col>
+
+    </ion-row>
+
+      <ion-row responsive-sm >
+      <ion-col>
+        <button class="large" ion-button (click)="cancel()"  block large>Annuler</button>
+      </ion-col>
+    </ion-row>
+
+	</form>
+
+    </ion-content>
+  
+  

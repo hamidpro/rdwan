@@ -1,0 +1,541 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Info Article</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+       <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<div class="logo">
+
+</div>
+
+<form #articleForm="ngForm" novalidate>
+  <ion-list no-lines>
+
+
+      <!--prix_ht_entree_article -->
+    <ion-item>
+      <ion-label stacked color="primary">Référence article article</ion-label>
+      <ion-input [(ngModel)]="article.reference_article" name="reference_article" type="text" #reference_article="ngModel"  disabled="true">
+      </ion-input>
+    </ion-item>
+  
+  
+   <!--  -->
+    <!--pays_article -->
+    <ion-item>
+      <ion-label stacked color="primary">Ville Article</ion-label>
+
+      
+
+      <ion-select  name="ville_article" [(ngModel)]="article.ville_article" #ville_article="ngModel" >
+      
+        <ion-option value="Rabat">Rabat</ion-option>
+        <ion-option value="Casablanca">Casablanca</ion-option>
+        <ion-option value="Ain Jemaa"> Ain Jemaa</ion-option> 
+        <ion-option value="Ait Benhaddou"> Ait Benhaddou</ion-option> 
+        <ion-option value="Ain Bni Mathar">Ain Bni Mathar </ion-option> 
+        <ion-option value="Ain Cheggag"> Ain Cheggag</ion-option> 
+        <ion-option value="Ain Defali">Ain Defali </ion-option> 
+        <ion-option value="Ain El Aouda">Ain El Aouda </ion-option> 
+        <ion-option value="Ain Erreggada">Ain Erreggada </ion-option> 
+        <ion-option value="Ain Taoujdate">Ain Taoujdate </ion-option> 
+        <ion-option value="Ait Boubidmane">Ait Boubidmane </ion-option> 
+        <ion-option value="Ait Bouhlal"> Ait Bouhlal</ion-option> 
+        <ion-option value="Ait Daoud">Ait Daoud </ion-option> 
+        <ion-option value="Ait Iaaza"> Ait Iaaza</ion-option> 
+        <ion-option value="Ait Ourir">Ait Ourir </ion-option> 
+        <ion-option value="Ajdir">Ajdir </ion-option> 
+        <ion-option value="Al Aaroui"> Al Aaroui</ion-option> 
+        <ion-option value="Al-Hoceima">Al-Hoceima </ion-option> 
+        <ion-option value="Amalou Ighriben"> Amalou Ighriben</ion-option> 
+        <ion-option value="Amgala"> Amgala</ion-option> 
+        <ion-option value="Amizmiz">Amizmiz </ion-option> 
+        <ion-option value="Aoufous">Aoufous </ion-option> 
+        <ion-option value="Arbaoua"> Arbaoua</ion-option> 
+        <ion-option value="Arfoud">Arfoud </ion-option> 
+        <ion-option value="Asilah"> Asilah</ion-option> 
+        <ion-option value="Assahrij"> Assahrij</ion-option> 
+        <ion-option value="Bab Berred"> Bab Berred</ion-option> 
+        <ion-option value="Bab Taza">Bab Taza </ion-option> 
+        <ion-option value="Ben Ahmed">Ben Ahmed </ion-option> 
+        <ion-option value="Beni Chiker"> Beni Chiker</ion-option> 
+        <ion-option value="Beni Ansar">Beni Ansar </ion-option> 
+        <ion-option value="Beni Mellal">Beni Mellal </ion-option> 
+        <ion-option value="Ben Slimane">Ben Slimane </ion-option> 
+        <ion-option value="Ben Taieb">Ben Taieb </ion-option> 
+        <ion-option value="Ben Yakhlef">Ben Yakhlef </ion-option> 
+        <ion-option value="Berkane"> Berkane</ion-option> 
+        <ion-option value="Berrechid">Berrechid </ion-option> 
+        <ion-option value="Bhalil">Bhalil </ion-option> 
+        <ion-option value="Bir GanBirdus">Bir GanBirdus </ion-option> 
+        <ion-option value="Bir Lehlou"> Bir Lehlou</ion-option> 
+        <ion-option value="Bni Bouayach">Bni Bouayach </ion-option> 
+        <ion-option value="Bni Drar"> Bni Drar</ion-option> 
+        <ion-option value="Bni Hadifa"> Bni Hadifa</ion-option> 
+        <ion-option value="Bni Tadjite"> Bni Tadjite</ion-option> 
+        <ion-option value="Bouarfa"> Bouarfa</ion-option> 
+        <ion-option value="Bou Craa">ou Craa </ion-option>
+        <ion-option value="Bouanane"> Bouanane</ion-option> 
+        <ion-option value="Boudnib">Boudnib </ion-option> 
+        <ion-option value="Boufakrane">Boufakrane </ion-option> 
+        <ion-option value="Bouguedra">Bouguedra </ion-option> 
+        <ion-option value="Bouizakarne">Bouizakarne </ion-option> 
+        <ion-option value="Boujad"> Boujad</ion-option> 
+        <ion-option value="Boujdour">Boujdour </ion-option> 
+        <ion-option value="Bouknadel">Bouknadel </ion-option> 
+        <ion-option value="Boulemane">Boulemane </ion-option> 
+        <ion-option value="Bouskoura"> Bouskoura</ion-option> 
+        <ion-option value="Bouznika">Bouznika </ion-option> 
+        <ion-option value="Bradia">Bradia </ion-option> 
+        <ion-option value="Brikcha">Brikcha </ion-option> 
+        <ion-option value="Chefchaouen">Chefchaouen </ion-option> 
+        <ion-option value="Chemaia">Chemaia </ion-option> 
+        <ion-option value="Chichaou"> Chichaou</ion-option>
+        <ion-option value="Dakhl">Dakhl </ion-option>
+        <ion-option value="Dar Gueddari">Dar Gueddari </ion-option> 
+        <ion-option value="Dar Kebdani">Dar Kebdani </ion-option> 
+        <ion-option value="Demnate"> Demnate</ion-option>
+        <ion-option value="Douar Bel Aguide">Douar Bel Aguide </ion-option>
+        <ion-option value="Driouch"> Driouch</ion-option> 
+        <ion-option value="El Aioun Sidi Mellouk">El Aioun Sidi Mellouk </ion-option>
+        <ion-option value="El Guerdane">El Guerdane </ion-option>
+        <ion-option value="El Hajeb"> El Hajeb</ion-option>
+        <ion-option value="El Hanchane">El Hanchane </ion-option>
+        <ion-option value="El Jadida">El Jadida </ion-option>
+        <ion-option value="Elkbab">Elkbab </ion-option>
+        <ion-option value="El Menzel">El Menzel </ion-option> 
+        <ion-option value="El Ouatia"> El Ouatia</ion-option> 
+        <ion-option value="Erfoud"> Erfoud</ion-option>
+        <ion-option value="Errachidia">Errachidia </ion-option>
+        <ion-option value="Essaouira">Essaouira </ion-option>
+        <ion-option value="Farcia">Farcia </ion-option>
+        <ion-option value="Fès">Fès </ion-option> 
+        <ion-option value="Figuig"> Figuig</ion-option> 
+        <ion-option value="Fnideq">Fnideq </ion-option> 
+        <ion-option value="Fquih Ben Salah"> Fquih Ben Sala</ion-option> 
+        <ion-option value="Er-Rich">Er-Rich </ion-option> 
+        <ion-option value="Guelmim">Guelmim </ion-option> 
+        <ion-option value="Goulmima">Goulmima </ion-option>
+        <ion-option value="Guelta Zemmour">Guelta Zemmour </ion-option>
+        <ion-option value="Guerguerat">Guerguerat </ion-option>
+        <ion-option value="Guisser"> Guisser</ion-option>
+        <ion-option value="Guercif">Guercif </ion-option> 
+        <ion-option value="Hagunia">Hagunia </ion-option>
+        <ion-option value="Hagunia">Hagunia </ion-option> 
+        <ion-option value="Haj Kaddour">Haj Kaddour </ion-option> 
+        <ion-option value="Harhoura">Harhoura </ion-option> 
+        <ion-option value="Ihddaden">Ihddaden </ion-option> 
+        <ion-option value="Ifrane"> Ifrane</ion-option> 
+        <ion-option value="Imilchil">Imilchil </ion-option> 
+        <ion-option value="Imilili"> Imilili</ion-option> 
+        <ion-option value="Imintanoute"> Imintanoute</ion-option> 
+        <ion-option value="Imouzzer Kandar"> Imouzzer Kandar</ion-option> 
+        <ion-option value="Immouzer Marmoucha"> Immouzer Marmoucha</ion-option> 
+        <ion-option value="Inezgane"> jerada</ion-option> 
+        <ion-option value="jerada">jerada </ion-option>
+        <ion-option value="Jorf">Jorf </ion-option>
+        <ion-option value="Jorf El Melha">Jorf El Melha </ion-option> 
+        <ion-option value="Jemâa Sahim">Jemâa Sahim </ion-option> 
+        <ion-option value="Kassita">Kassita </ion-option> 
+        <ion-option value="Kattara">Kattara </ion-option> 
+        <ion-option value="Kénitra">Kénitra </ion-option>
+        <ion-option value="Kehf Nsour">Kehf Nsour </ion-option> 
+        <ion-option value="Khémisset"> Khémisset</ion-option> 
+        <ion-option value="Khemis Sahel">Khemis Sahel </ion-option> 
+        <ion-option value="Khemis Zemamra">hemis Zemamra </ion-option>
+        <ion-option value="Khenichet">Khenichet </ion-option> 
+        <ion-option value="Khénifra">Khénifra </ion-option> 
+        <ion-option value="Khouribga">Khouribga </ion-option> 
+        <ion-option value="Ksar el-Kébir">Ksar el-Kébir </ion-option> 
+        <ion-option value="Laayoune">Laayoune </ion-option>
+        <ion-option value="Lagouira">Lagouira </ion-option>
+        <ion-option value="Lalla Mimouna">Lalla Mimouna </ion-option> 
+        <ion-option value="Larache">Larache </ion-option> 
+        <ion-option value="Lixus">Lixus </ion-option> 
+        <ion-option value="Lqliâa">Lqliâa </ion-option> 
+        <ion-option value="Madagh">Madagh </ion-option> 
+        <ion-option value="Riad Heritage"> Riad Heritage</ion-option>
+        <ion-option value="Marrakech">Marrakech </ion-option> 
+        <ion-option value="Martil"> Martil</ion-option> 
+        <ion-option value="Mechra Bel Ksiri">Mechra Bel Ksiri </ion-option> 
+        <ion-option value="Mediekdiq">Mediekdiq </ion-option> 
+        <ion-option value="Mediouna"> Mediouna</ion-option> 
+        <ion-option value="Mehdia">Mehdia </ion-option> 
+        <ion-option value="Meknès">Meknès </ion-option> 
+        <ion-option value="Melloussa">Melloussa </ion-option> 
+        <ion-option value="Midelt">Midelt </ion-option> 
+        <ion-option value="Mirleft">Mirleft </ion-option> 
+        <ion-option value="Mohammédia"> Mohammédia</ion-option>
+        <ion-option value="Moqrisset">Moqrisset </ion-option> 
+        <ion-option value="Moulay Ali Cherif">Moulay Ali Cherif</ion-option> 
+        <ion-option value="Moulay Bousselham">Moulay Bousselham</ion-option> 
+        <ion-option value="Moulay Idriss Zerhoun">Moulay Idriss Zerhoun </ion-option>
+        <ion-option value="Mrirt">Mrirt </ion-option> 
+        <ion-option value="nador">nador </ion-option>
+        <ion-option value="nhima">nhima </ion-option>
+        <ion-option value="Ouarzazate"> Ouarzazate</ion-option> 
+        <ion-option value="Oualidia">Oualidia </ion-option> 
+        <ion-option value="Ouezzane"> Ouezzane</ion-option> 
+        <ion-option value="Oujda">Oujda </ion-option>
+        <ion-option value="Oukaimeden">Oukaimeden </ion-option> 
+        <ion-option value="Oulad Amrane">Oulad Amrane </ion-option> 
+        <ion-option value="Oulad Ayad"> Oulad Ayad</ion-option> 
+        <ion-option value="Oulad Berhil">Oulad Berhil </ion-option> 
+        <ion-option value="Oulad Frej"> Oulad Frej</ion-option> 
+        <ion-option value="Oulad Ghadbane"> ulad Ghadbane</ion-option> 
+        <ion-option value="Oulad H Riz Sahel">Oulad H Riz Sahel </ion-option> 
+        <ion-option value="Oulad MRah">Oulad MRah </ion-option> 
+        <ion-option value="Oulad M Barek"> Oulad M Barek</ion-option> 
+        <ion-option value="Oulad Teïma">Oulad Teïma </ion-option> 
+        <ion-option value="Oulad Zbair"> Oulad Zbair</ion-option> 
+        <ion-option value="Ouled Tayeb">Ouled Tayeb </ion-option> 
+        <ion-option value="Ouled Youssef">Ouled Youssef </ion-option> 
+        <ion-option value="Oulmès"> Oulmès</ion-option> 
+        <ion-option value="Ounagha">Ounagha </ion-option> 
+        <ion-option value="Ras El Ma">Ras El Ma </ion-option> 
+        <ion-option value="Ribate El Kheir"> Ribate El Kheir</ion-option> 
+        <ion-option value="Rissani">Rissani </ion-option>
+        <ion-option value="Sabaa Aiyoun">Sabaa Aiyoun </ion-option> 
+        <ion-option value="Safi"> Safi</ion-option> 
+        <ion-option value="Saidia">Saidia </ion-option> 
+        <ion-option value="Salé"> Salé</ion-option>
+        <ion-option value="Sebt El Maârif">Sebt El Maârif </ion-option> 
+        <ion-option value="Sebt Gzoula">Sebt Gzoula </ion-option> 
+        <ion-option value="Sebt Jahjouh">Sebt Jahjouh </ion-option> 
+        <ion-option value="Sefrou"> Sefrou</ion-option> 
+        <ion-option value="Setta">Setta </ion-option>t
+        <ion-option value="Sid Zouin">Sid Zouin </ion-option> 
+        <ion-option value="Sidi Abdallah Ghiat"> Sidi Abdallah Ghiat</ion-option> 
+        <ion-option value="Sidi Addi">Sidi Addi </ion-option> 
+        <ion-option value="Sidi Ali Ban Hamdouche">Sidi Ali Ban Hamdouche </ion-option>  
+        <ion-option value="Sidi Allal El Bahraoui"> Sidi Allal El Bahraoui</ion-option>  
+        <ion-option value="Sidi Allal Tazi"> Sidi Allal Tazi</ion-option>  
+        <ion-option value="Sidi Bou Othmane">Sidi Bou Othmane </ion-option>  
+        <ion-option value="Sidi Boubker">Sidi Boubker </ion-option>  
+        <ion-option value="Sidi Jaber">Sidi Jaber </ion-option>  
+        <ion-option value="Sidi Kacem">Sidi Kacem </ion-option> 
+        <ion-option value="Sidi Lyamani">Sidi Lyamani </ion-option>  
+        <ion-option value="Sidi Rahhal">Sidi Rahhal </ion-option>  
+        <ion-option value="Sidi Slimane">Sidi Slimane </ion-option>  
+        <ion-option value="Sidi Smaïl"> Sidi Smaïl</ion-option>  
+        <ion-option value="Sidi Taibi">Sidi Taibi </ion-option>  
+        <ion-option value="Sidi Yahya el Gharb">Sidi Yahya el Gharb </ion-option>  
+        <ion-option value="Skhirat">Skhirat </ion-option>  
+        <ion-option value="Smara"> Smara</ion-option> 
+        <ion-option value="Souq Larba al Gharb">Souq Larba al Gharb </ion-option>  
+        <ion-option value="Taddert"> Taddert</ion-option>  
+        <ion-option value="Tafetachte">Tafetachte </ion-option>  
+        <ion-option value="Tafrisset"> Tafrisset</ion-option>  
+        <ion-option value="Taghjijt">Taghjijt </ion-option>  
+        <ion-option value="Tahala">Tahala </ion-option>  
+        <ion-option value="Tahannaout">Tahannaout </ion-option>  
+        <ion-option value="Tainaste"> Tainaste</ion-option>  
+        <ion-option value="Taliouine">Taliouine </ion-option>  
+        <ion-option value="Talmest">Talmest </ion-option>  
+        <ion-option value="Talssint">Talssint </ion-option>  
+        <ion-option value="Tanger"> Tanger</ion-option> 
+        <ion-option value="Tan-Tan">Tan-Tan </ion-option>  
+        <ion-option value="Tamallalt">Tamallalt </ion-option>  
+        <ion-option value="Tamanar"> Tamanar</ion-option>  
+        <ion-option value="Tameslouht">Tameslouht </ion-option>  
+        <ion-option value="Taourirte"> Taourirte</ion-option>  
+        <ion-option value="Tarfaya">Tarfaya </ion-option>  
+        <ion-option value="Taroudannt">Taroudannt </ion-option>  
+        <ion-option value="Tata"> Tata</ion-option>  
+        <ion-option value="Taza"> Taza</ion-option>  
+        <ion-option value="Taznakht">Taznakht </ion-option>  
+        <ion-option value="Télouet"> Télouet</ion-option>  
+        <ion-option value="Temara">Temara </ion-option>  
+        <ion-option value="Temsia">Temsia </ion-option>  
+        <ion-option value="Tétouan">Tétouan </ion-option>  
+        <ion-option value="Thar Es-Souk">Thar Es-Souk </ion-option>  
+        <ion-option value="Tichla">Tichla </ion-option>  
+        <ion-option value="Tidass">Tidass </ion-option>  
+        <ion-option value="Tifariti"> Tifariti</ion-option>  
+        <ion-option value="Tiflet">Tiflet </ion-option>  
+        <ion-option value="Tingdad">Tingdad </ion-option>  
+        <ion-option value="Tinghir">Tinghir </ion-option>  
+        <ion-option value="Tinmel">Tinmel </ion-option>  
+        <ion-option value="Tiznit"> Tiznit</ion-option>  
+        <ion-option value="Tiztoutine">Tiztoutine </ion-option>  
+        <ion-option value="Torres de Alcala"> Torres de Alcala</ion-option>  
+        <ion-option value="Tifelt"> Tifelt</ion-option>  
+        <ion-option value="Volubilis">Volubilis </ion-option> 
+        <ion-option value="Youssoufia">Youssoufia </ion-option>  
+        <ion-option value="Zagora">Zagora </ion-option>  
+        <ion-option value="Zaio">Zaio </ion-option>    
+        </ion-select>
+
+
+
+    </ion-item>
+    <p ion-text [hidden]="ville_article.valid || submitted == false" color="danger" padding-left>
+      Ville article est Obligatoire
+    </p>
+    <!--  -->
+
+
+    <!--prix_ht_entree_article -->
+    <ion-item>
+      <ion-label stacked color="primary">Prix HT d'acquisition</ion-label>
+      <ion-input [(ngModel)]="article.prix_ht_acquisition_article" name="prix_ht_acquisition_article" type="number" #prix_ht_acquisition_article="ngModel" >
+      </ion-input>
+    </ion-item>
+    
+  
+   <!--  -->
+
+   
+
+
+
+
+
+    <!--prix_ttc_acquisition_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Price TTC d'acquisition</ion-label>
+        <ion-input [(ngModel)]="article.prix_ttc_acquisition_article" name="prix_ttc_acquisition_article" type="number" #prix_ttc_acquisition_article="ngModel" >
+        </ion-input>
+      </ion-item>
+     
+  
+     <!--  -->
+
+
+    <!--libelle_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Libellé article</ion-label>
+        <ion-input [(ngModel)]="article.libelle_article" name="libelle_article" type="text" #libelle_article="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="libelle_article.valid || submitted == false" color="danger" padding-left>
+        Libellé article est Obligatoire
+      </p>
+  
+     <!--  -->
+
+
+    <!--Date_entree_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Date entrée article</ion-label>
+        <ion-datetime displayFormat="DD-MM-YYYY HH:mm" pickerFormat="YYYY-MM-DD HH:mm:ss" [(ngModel)]="article.Date_entree_article" name="Date_entree_article"  #Date_entree_article="ngModel" required> </ion-datetime> 
+         
+
+      </ion-item>
+      <p ion-text [hidden]="Date_entree_article.valid || submitted == false" color="danger" padding-left>
+        Date entrée article est Obligatoire
+      </p>
+   
+     <!--  -->
+
+
+    <!--date_de_sortie_article 
+    <ion-item>
+        <ion-label stacked color="primary">Date de sortie article</ion-label>
+    
+        <ion-datetime displayFormat="DD-MM-YYYY HH:mm"  pickerFormat="YYYY-MM-DD HH:mm:ss"  [(ngModel)]="article.date_de_sortie_article" name="date_de_sortie_article"  #date_de_sortie_article="ngModel" required> </ion-datetime> 
+        
+      </ion-item>
+      <p ion-text [hidden]="date_de_sortie_article.valid || submitted == false" color="danger" padding-left>
+        Date de sortie article est Obligatoire
+      </p>
+ 
+   -->
+
+    <!--fabriquant_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Fabriquant article</ion-label>
+        <ion-input [(ngModel)]="article.fabriquant_article" name="fabriquant_article" type="text" #fabriquant_article="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="fabriquant_article.valid || submitted == false" color="danger" padding-left>
+        Fabriquant article est Obligatoire
+      </p>
+
+     <!--  -->
+
+    <!--prix_ht_sortie_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Prix Ht Sortie Article</ion-label>
+        <ion-input [(ngModel)]="article.prix_ht_sortie_article" name="prix_ht_sortie_article" type="number" #prix_ht_sortie_article="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="prix_ht_sortie_article.valid || submitted == false" color="danger" padding-left>
+        Prix Ht Sortie Article est Obligatoire
+      </p>
+  
+     <!--  -->
+
+    <!--fournisseur_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Fournisseur article</ion-label>
+        <ion-input [(ngModel)]="article.fournisseur_article" name="fournisseur_article" type="text" #fournisseur_article="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="fournisseur_article.valid || submitted == false" color="danger" padding-left>
+        Fournisseur article est Obligatoire
+      </p>
+
+     <!--  -->
+
+
+      <!--prix_ttc_sortie_article -->
+    <ion-item>
+      <ion-label stacked color="primary">Prix TTC sortie article</ion-label>
+      <ion-input [(ngModel)]="article.prix_ttc_sortie_article" name="prix_ttc_sortie_article" type="number" #prix_ttc_sortie_article="ngModel" required>
+      </ion-input>
+    </ion-item>
+    <p ion-text [hidden]="prix_ttc_sortie_article.valid || submitted == false" color="danger" padding-left>
+      Prix TTC sortie article est Obligatoire
+    </p>
+
+   <!--  -->
+
+         <!--client_article 
+    <ion-item>
+        <ion-label stacked color="primary">Client article</ion-label>
+        <ion-input [(ngModel)]="article.client_article" name="client_article" type="text" #client_article="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="client_article.valid || submitted == false" color="danger" padding-left>
+        Client article est Obligatoire
+      </p>
+
+    -->
+
+
+     <!--categorie_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Catégorie article</ion-label>
+          <ion-select [(ngModel)]="article.categorie_article" name="categorie_article" type="text" #categorie_article="ngModel" required>
+          <ion-option  *ngFor="let categorie of listCategories" value="{{categorie}}">{{categorie}}</ion-option>
+        </ion-select>
+
+     
+      </ion-item>
+      <p ion-text [hidden]="categorie_article.valid || submitted == false" color="danger" padding-left>
+        Catégorie article est Obligatoire
+      </p>
+
+     <!--  -->
+           <!--marque_article -->
+    <ion-item>
+        <ion-label stacked color="primary">Marque article</ion-label>
+
+
+        <ion-select [(ngModel)]="article.marque_article" name="marque_article" type="text" #marque_article="ngModel" required>
+          <ion-option  *ngFor="let marque of listMarques" value="{{marque}}">{{marque}}</ion-option>
+        </ion-select>
+    
+      </ion-item>
+      <p ion-text [hidden]="marque_article.valid || submitted == false" color="danger" padding-left>
+        Marque article est Obligatoire
+      </p>
+    
+     <!--  -->
+
+
+
+     <!--description_article -->
+     <ion-item>
+
+      <ion-label stacked color="primary">Description</ion-label>
+        <ion-input [(ngModel)]="article.description_article" name="description_article" type="text" #description_article="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="description_article.valid || submitted == false" color="danger" padding-left>
+          Description  est Obligatoire
+      </p>
+       <!--  -->
+     <!--famille -->
+     <ion-item>
+
+      <ion-label stacked color="primary">Famille </ion-label>
+        <ion-select [(ngModel)]="article.famille_article" name="famille_article" type="text" #famille_article="ngModel" required>
+          <ion-option  *ngFor="let famille of listFamilles" value="{{famille}}">{{famille}}</ion-option>
+        </ion-select>
+    
+
+      </ion-item>
+      <p ion-text [hidden]="famille_article.valid || submitted == false" color="danger" padding-left>
+          Famille article est Obligatoire
+      </p>
+       <!--  -->
+      
+     <!--type -->
+     <ion-item>
+      <ion-label stacked color="primary">Type </ion-label>
+        <ion-select [(ngModel)]="article.type_article" name="type_article" type="text" #type_article="ngModel" required>
+          <ion-option  *ngFor="let type of listTypes" value="{{type}}">{{type}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <p ion-text [hidden]="type_article.valid || submitted == false" color="danger" padding-left>
+          Famille article est Obligatoire
+      </p>
+       <!--  -->
+
+
+    
+       <ion-item>
+        <ion-label stacked color="primary">Endroit </ion-label>
+          <ion-select [(ngModel)]="article.endroit_article" name="endroit_article" type="text" #endroit_article="ngModel" required>
+            <ion-option  *ngFor="let endroit of listEndroit" value="{{endroit}}">{{endroit}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <p ion-text [hidden]="endroit_article.valid || submitted == false" color="danger" padding-left>
+          Endroit article est Obligatoire
+        </p>
+  
+
+           
+     <ion-item>
+      <ion-label stacked color="primary">Etat </ion-label>
+        <ion-select [(ngModel)]="article.etat_article" name="etat_article" type="text" #etat_article="ngModel" required>
+          <ion-option  *ngFor="let etat of listEtat" value="{{etat}}">{{etat}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <p ion-text [hidden]="etat_article.valid || submitted == false" color="danger" padding-left>
+          Famille article est Obligatoire
+      </p>
+       <!--  -->
+
+
+    </ion-list>
+
+    
+     <!--  -->
+
+
+  <ion-row responsive-sm>
+    <ion-col *ngIf="!edit">
+      <button ion-button (click)="valider(articleForm)" type="submit" block><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Ajouter</button>
+    </ion-col>
+ 
+  
+  <ion-col *ngIf="edit">
+    <button ion-button (click)="modifier(articleForm)" type="submit" block><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Modifier</button>
+  </ion-col>
+
+
+
+  <ion-col>
+    <button ion-button (click)="cancel()" type="submit" block>Annuler</button>
+  </ion-col>
+
+
+
+</ion-row>
+
+
+</form>
+
+</ion-content>

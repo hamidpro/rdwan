@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact Nous</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">    
+    <div class="contact">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="well form_information">
+            <h3 style="line-height:20%;"><i class="fa fa-home fa-1x" style="line-height:6%;color:#339966;margin-bottom:6%;"></i> Addresse :</h3>
+            <p style="line-height:35%"> Siège central : 265, Bd Zerktouni N° 92</p>
+            <br />
+            <br />
+            <h3 style="line-height:20%;"><i class="fa fa-envelope fa-1x" style="line-height:6%;color:#339966"></i> E-Mail :</h3>
+            <p style="margin-top:6%;line-height:35%">sinfotech.sarl@gmail.com</p>
+            <br />
+            <br />
+            <h3 style="line-height:20%;"><i class="fa fa-user fa-1x" style="line-height:6%;color:#339966"></i> Tél:</h3>
+            <p style="margin-top:6%;line-height:35%">+212 6 70 05 86 34</p>
+            <p style="margin-top:6%;line-height:35%">+212 6 63 12 95 77</p>
+            <br><br><br>
+            <!-- debut form -->
+    
+    
+            <!-- fin form -->
+    
+    
+              </div>
+        </div>
+        <div class="col-sm-6">
+            <map></map>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <h3>Envoyer nous un message</h3>
+      <form>
+        <div class="form-group input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" placeholder="Your name">
+        </div>
+    
+        <div class="form-group input-group has-danger">
+          <span class="input-group-addon"><i class="fa fa-at"></i></span>
+          <input type="text" class="form-control form-control-danger" placeholder="Your email address">
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Votre message</label>
+          <textarea class="form-control" rows="5" id="message"></textarea>
+        </div>
+        <div class="col-md-4 ">
+        <div class="form-group">
+    
+          <button class="btn btn-success btn-block btn-lg ">
+            <i class="fa fa-send-o"></i>
+            Envoyer
+          </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <br><br><br><br>
+   
+    </div>
+    
+</ion-content>

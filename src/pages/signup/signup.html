@@ -1,0 +1,117 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>S'inscrire</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="login-page">
+
+	<div class="logo">
+		<img src="assets/img/appicon.png" alt="App logo">
+	</div>
+
+	<form #signupForm="ngForm" novalidate>
+		<ion-list no-lines>
+
+
+			
+
+
+			<!-- firstName -->
+			<ion-item>
+					<ion-label stacked color="primary">Prénom</ion-label>
+					<ion-input [(ngModel)]="user.prenom_user" name="prenom_user" type="text" #prenom_user="ngModel" required>
+					</ion-input>
+				</ion-item>
+				<p ion-text [hidden]="prenom_user.valid || submitted == false" color="danger" padding-left>
+					Prénom est Obligatoire
+				</p>
+			<!--  -->
+
+			<!-- lastName -->
+			<ion-item>
+					<ion-label stacked color="primary">Nom</ion-label>
+					<ion-input [(ngModel)]="user.nom_user" name="nom_user" type="text" #nom_user="ngModel" required>
+					</ion-input>
+				</ion-item>
+				<p ion-text [hidden]="nom_user.valid || submitted == false" color="danger" padding-left>
+					Nom est Obligatoire
+				</p>
+			<!--  -->
+
+			<!-- email -->
+			<ion-item>
+					<ion-label stacked color="primary">E-mail</ion-label>
+					<ion-input [(ngModel)]="user.email_user" name="email_user" type="email" #email_user="ngModel" required>
+					</ion-input>
+				</ion-item>
+				<p ion-text [hidden]="email_user.valid || submitted == false" color="danger" padding-left>
+						E-mail est Obligatoire
+				</p>
+			<!--  -->
+			<!-- Tel -->
+			<ion-item>
+					<ion-label stacked color="primary">Tél 1</ion-label>
+					<ion-input [(ngModel)]="user.tel1_user" name="tel1_user" type="text" #tel1_user="ngModel" required>
+					</ion-input>
+				</ion-item>
+				<p ion-text [hidden]="tel1_user.valid || submitted == false" color="danger" padding-left>
+					Tél est Obligatoire
+				</p>
+			<!--  -->
+
+			<!-- Tel -->
+			<ion-item>
+				<ion-label stacked color="primary">Tél 2</ion-label>
+				<ion-input [(ngModel)]="user.tel2_user" name="tel2_user" type="text" #tel2_user="ngModel" >
+				</ion-input>
+			</ion-item>
+			<!--  -->
+
+
+<!-- Tel -->
+			<ion-item>
+				<ion-label stacked color="primary">Adresse</ion-label>
+				<ion-input [(ngModel)]="user.adresse_user" name="adresse_user" type="text" #adresse_user="ngModel" >
+				</ion-input>
+			</ion-item>
+			<!--  -->
+
+<!-- Tel -->
+<ion-item>
+	<ion-label stacked color="primary">Code Postal</ion-label>
+	<ion-input [(ngModel)]="user.code_postal_user" name="code_postal_user" type="text" #code_postal_user="ngModel" >
+	</ion-input>
+</ion-item>
+<!--  -->
+
+
+
+			<ion-item>
+				<ion-label stacked color="primary">Nom D'Utilisateur</ion-label>
+				<ion-input [(ngModel)]="user.username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Nom D'Utilisateur est Obligatoire
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Mot De Passe</ion-label>
+				<ion-input [(ngModel)]="user.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Mot De Passe est Obligatoire
+			</p>
+		</ion-list>
+
+
+		<div padding>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block large><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Valider</button>
+		</div>
+	</form>
+</ion-content>
