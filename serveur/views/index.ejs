@@ -1,0 +1,18 @@
+
+<h1> hello </h1>
+<form action="<%= action %>" method="POST">
+    <table>
+    <input type="hidden" name="_method" value="PUT">
+
+    <% if (fields.length) { %>
+    <% fields.forEach(function(field){ %>
+    <tr>
+        <td><label><%= field.name %></label></td>
+    <td><input type="<%= field.type %>" name="<%= field.name %>" <% if (field.property) { %> <%= field.property %> <% } %> >
+    </td></tr>
+        <% }) %>
+    <% } %>
+
+    <tr><td><button type="submit"><%= title %></button> </td></tr><!--Title for button is same as that of the page-->
+    </table>
+</form>
